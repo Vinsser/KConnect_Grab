@@ -1,9 +1,10 @@
 import requests
 import json
+import sys
 
-seed_url = 'https://hybrid-data-delivery-kafka-connect-gcp-dev.bigdatainfrastructure.k8s.genmills.com/connectors'
-#seed_url = 'https://hybrid-data-delivery-kafka-connect-gcp-qa.bigdatainfrastructure.k8s.genmills.com/connectors'
-#seed_url = 'https://hybrid-data-delivery-kafka-connect-gcp-prod.bigdatainfrastructure.k8s.genmills.com/connectors'
+args = sys.argv[1:]
+
+seed_url = str(args[0])
 
 #connectors = []
 
