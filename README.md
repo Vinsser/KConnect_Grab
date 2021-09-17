@@ -1,7 +1,6 @@
 # KConnect_Grab
 Python tool to grab configs/status for Kafka Connectors
 
-#Usage
-python -Wignore .\conngrab.py
+#### Usage
+python -Wignore conngrab.py https://abc.xyz.com/connectors
 
-picks target url from seed_url
