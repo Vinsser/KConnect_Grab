@@ -34,6 +34,7 @@ def all_status():
         for T in status_dict['tasks']:
             print( T['id'], T['state'])
             if T['state'] == 'FAILED': print(seed_url + '/' + conn + '/tasks/' + str(T['id']) + '/restart')
+            if T['state'] == 'UNASSIGNED': print(seed_url + '/' + conn + '/tasks/' + str(T['id']) + '/restart')
         #print( [(T['id'], T['state']) for T in status_dict['tasks']] )
         print('\n')
         #print(status_dict)
