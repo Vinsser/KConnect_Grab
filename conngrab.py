@@ -19,18 +19,19 @@ def jprint(obj):
     text = json.dumps(obj, sort_keys=True, indent=4)
     print(text)
 
+# get config
 def get_config(conn):
     config_url = seed_url + '/' + conn + '/config'
     config_response = requests.get(config_url, verify=False)
     if (args.param): return args.param + ': ' + config_response.json()[args.param]
     else: return config_response.json()
 
+# get multiple config
 def get_configs():
     for conn in connectors:
-        config_url = seed_url + '/' + conn + '/config'
-        config_response = requests.get(config_url, verify=False)
-        print(conn)
-        if (args.param): print( args.param + ': ' + config_response.json()[args.param] )
+        if (args.param): 
+            print(conn)
+            print(get_config(conn))
         else: print("please specify params")
         print('\n')
 
