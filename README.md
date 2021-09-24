@@ -16,4 +16,4 @@ optional arguments:\
   -A, --all_config  To get config for all connectors, params is required\
   -c , --conn       To get status for a specific connector\
   -C , --config     To get config for a specific connector\
-  -p , --param      specify a parameter from a config\
+  -p , --param      specify a parameter from a config
