@@ -2,9 +2,9 @@
 Python tool to grab configs/status for Kafka Connectors
 
 #### Usage
-python -Wignore conngrab.py https://abc.xyz.com/connectors - displays connectors list
+python conngrab.py https://abc.xyz.com/connectors - displays connectors list
 
-$python -Wignore conngrab.py -h
+$python conngrab.py -h
 usage: conngrab.py [-h] [-a] [-A] [-c] [-C] [-p] connector_url
 
 positional arguments:
