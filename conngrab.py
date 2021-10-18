@@ -1,6 +1,9 @@
 import requests
 import argparse
 import json
+import warnings
+
+warnings.filterwarnings("ignore")
 
 ## Setting up parser
 parser = argparse.ArgumentParser()
