@@ -69,7 +69,7 @@ def restart_all_tasks():
         status_dict = get_status(conn)
         for T in status_dict['tasks']:
             #print( T['id'], T['state'])
-            if T['state'] == 'FAILED': 
+            if T['state'] != 'RUNNING': 
                 #print(seed_url + '/' + conn + '/tasks/' + str(T['id']) + '/restart')
                 restart_url = seed_url + '/' + conn + '/tasks/' + str(T['id']) + '/restart'
                 print(restart_url)
