@@ -130,3 +130,6 @@ dmypy.json
 
 # Worksheets
 worksheets/
+
+# MISC
+*.bat
