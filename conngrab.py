@@ -26,7 +26,7 @@ def jprint(obj):
 # get config
 def get_config(conn):
     config_url = seed_url + '/' + conn + '/config'
-    config_response = requests.get(config_url, verify=False)
+    config_response = requests.get(config_url, verify=False, timeout=100)
     if (args.param): return args.param + ': ' + config_response.json()[args.param]
     else: return config_response.json()
 
@@ -42,7 +42,7 @@ def get_configs():
 # method to get status
 def get_status(conn):
     status_url = seed_url + '/' + conn + '/status'
-    status_response = requests.get(status_url, verify=False)
+    status_response = requests.get(status_url, verify=False, timeout=100)
     return status_response.json()
 
 # method to display a single available connector status
@@ -77,7 +77,7 @@ def restart_all_tasks():
 
 if __name__ == '__main__':
 
-    seed_response = requests.get(seed_url, verify=False)
+    seed_response = requests.get(seed_url, verify=False, timeout=100)
     connectors = seed_response.json()
 
     if (args.all_status): all_displ()
